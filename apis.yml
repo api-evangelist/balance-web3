@@ -1,23 +1,62 @@
 aid: balance-web3
+
 name: Balance Web3
-description: 'Balance Web3 is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Balance Web3 is a blockchain-focused company that provides decentralized finance (DeFi) solutions, including wallet services, staking, and token management APIs. The company aims to simplify Web3 interactions for developers and end‑users by offering robust, secure, and scalable API endpoints for blockchain data, transaction broadcasting, and smart‑contract integration. This profile is part of the API Evangelist enrichment pipeline to document its public API offerings.'
+
 url: https://raw.githubusercontent.com/api-evangelist/balance-web3/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Blockchain
+- DeFi
+- Web3
+- APIs
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://www.nasdaqprivatemarket.com/
+
+
+  - type: Hosts
+    url: hosts/balance-web3-hosts.yml
+  - type: Vendors
+    url: vendors/balance-web3-vendors.yml
+  - type: DomainSecurity
+    url: security/balance-web3-domain-security.yml
+  - type: Website
+    url: https://www.nasdaqprivatemarket.com/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's website does not expose any machine‑readable API specification.
+  evidence:
+    - url: https://www.nasdaqprivatemarket.com/
+      status: 200
+  checked: 2026-09-27
+x-enrichment:
+  date: '2026-09-27'
+  status: minimal
+  artifacts_added: 3
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
